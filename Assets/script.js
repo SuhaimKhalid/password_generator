@@ -108,7 +108,7 @@ function getPasswordOptions() {
   // Check if all user input are false 
   if(lowercase_input ==false && uppercase_input == false && numeric_input==false && special_characters_input==false)
   {
-    alert("PLease select at Least 1 character type.");
+    alert("PLease select at Least 1 character type");
   }
 
   // Run when at least one user inout is true
@@ -162,7 +162,7 @@ function getRandom(password_length) {
     // put random number as an index for password_array
     // store and add it to the password sting variable
     password += password_array[random_number];
-  } console.log(password);
+  } 
   // Return the random generated password to display
    return password;
   
