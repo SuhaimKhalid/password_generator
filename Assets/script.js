@@ -106,7 +106,14 @@ function getPasswordOptions() {
   {
     password_option = password_option.concat(upperCasedCharacters);
   }
-  if(num)
+  if(numeric_input)
+  {
+    password_option = password_option.concat(numericCharacters);
+  }
+  if(special_characters_input)
+  {
+    password_option= password_option.concat(specialCharacters);
+  }
 
 }
 
