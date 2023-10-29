@@ -22,7 +22,7 @@ body {
   padding-left: 20px;
   padding-right: 20px;
 }
-
+/* Header */
 header {
   text-align: center;
   padding: 20px;
@@ -30,6 +30,7 @@ header {
   color: hsl(206, 17%, 28%);
 }
 
+/* Card for to show password area */
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
@@ -42,6 +43,7 @@ header {
   padding: 30px 40px;
 }
 
+/* card heaser after effect */
 .card-header::after {
   content: " ";
   display: block;
@@ -50,10 +52,12 @@ header {
   height: 2px;
 }
 
+/* card body */
 .card-body {
   min-height: 100px;
 }
 
+/* card footer */
 .card-footer {
   text-align: center;
 }
@@ -72,6 +76,7 @@ header {
   clear: both;
 }
 
+/* Password button */
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
@@ -97,6 +102,7 @@ button[disabled] {
   float: right;
 }
 
+/* Password area */
 #password {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -118,6 +124,7 @@ button[disabled] {
   overflow: hidden;
 }
 
+/* Responsive Queries */
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;
@@ -129,7 +136,7 @@ button[disabled] {
     font-size: 1rem;
   }
 }
-
+/* Responsive Queries */
 @media (max-width: 500px) {
   .btn {
     font-size: 0.8rem;
