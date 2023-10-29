@@ -90,31 +90,48 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-  // Declare vaiables to store password options
+  // Declare vaiables to store Lower Case password options
   var lowercase_input = confirm("Do you want Lowercase character in Password?");
+
+  // Declare vaiables to store Upper Case password options
   var uppercase_input = confirm("Do you want Uppercase character in Password?");
+
+  // Declare vaiables to store Numeric Character password options
   var numeric_input = confirm("Do you want Numeric character in Password?");
+
+  // Declare vaiables to store Special Character password options
   var special_characters_input = confirm("Do you want Special characters in Password?");
 
   // Delcare a variable to store array of password option
   var password_option =[];
+
+  // only run when lowercase_input is selected true by the user
   if(lowercase_input)
   {
     password_option = password_option.concat(lowerCasedCharacters);
   }
-  if(upperCasedCharacters)
+
+  // only run when Uppercase_input is selected true by the user
+  if(uppercase_input)
   {
     password_option = password_option.concat(upperCasedCharacters);
   }
+
+  // only run when Numeric_input is selected true by the user
   if(numeric_input)
   {
     password_option = password_option.concat(numericCharacters);
   }
+
+  // only run when special_character_input is selected true by the user
   if(special_characters_input)
   {
     password_option= password_option.concat(specialCharacters);
   }
 
+  // In the end retuen the new generated array 
+    return password_option;
+ 
 }
 
 // Function for getting a random element from an array
