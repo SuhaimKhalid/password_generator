@@ -105,6 +105,13 @@ function getPasswordOptions() {
   // Delcare a variable to store array of password option
   var password_option =[];
 
+  // Check if all user input are false 
+  if(lowercase_input ==false && uppercase_input == false && numeric_input==false && special_characters_input==false)
+  {
+    alert("PLease select at Least 1 character type.");
+  }
+  // Run when at least one user inout is true
+else{
   // only run when lowercase_input is selected true by the user
   if(lowercase_input)
   {
@@ -128,9 +135,10 @@ function getPasswordOptions() {
   {
     password_option= password_option.concat(specialCharacters);
   }
-
   // In the end retuen the new generated array 
-    return password_option;
+  return password_option;
+  }
+ 
  
 }
 
