@@ -110,8 +110,10 @@ function getPasswordOptions() {
   {
     alert("PLease select at Least 1 character type.");
   }
+
   // Run when at least one user inout is true
-else{
+ else{
+
   // only run when lowercase_input is selected true by the user
   if(lowercase_input)
   {
@@ -143,8 +145,27 @@ else{
 }
 
 // Function for getting a random element from an array
-function getRandom(arr) {
+function getRandom(password_length) {
 
+  // Geeting the return value from get password option function and store it in a variable
+  var password_array = getPasswordOptions();
+
+// Declare a varable to store random generated string from the password_array 
+  var password="";
+
+  // Make a loop to run on every index
+  for(var i=0; i<password_length; i++)
+  {
+    // declare a vaiable to store a random generated number from the password_array
+    var random_number = Math.floor(Math.random()*password_array.length);
+
+    // put random number as an index for password_array
+    // store and add it to the password sting variable
+    password += password_array[random_number];
+  } console.log(password);
+  // Return the random generated password to display
+   return password;
+  
 }
 
 // Function to generate password with user input
@@ -154,10 +175,10 @@ function generatePassword() {
 var Pass = prompt("How Long Password Should Be ?");
 
 // Convert string in to number
-var password_number = parsent(Pass);
+var password_number = parseInt(Pass);
 
 // Check if password is number or not
-if(isNaN ==password_number)
+if(isNaN (password_number))
 {
   alert("Please Enter a Number");
 }
